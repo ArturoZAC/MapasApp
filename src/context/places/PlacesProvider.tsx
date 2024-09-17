@@ -64,7 +64,7 @@ export const PlacesProvider = ({children} : Props) => {
         
         dispatch({type: 'setPlaces', payload: resp.data.features});
 
-        console.log(resp.data.features)
+        // console.log(resp.data.features)
         return resp.data.features
     }
 

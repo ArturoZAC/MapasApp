@@ -15,11 +15,16 @@ export const SearchBar = () => {
     }
 
     debounceRef.current = setTimeout(() => {
-      searchPlacesByTerm(event.target.value)
-      // console.log('debounced value: ', event?.target.value)
+      searchPlacesByTerm(event.target.value);
+      if (map) {
+        if (map.getLayer('RouteString')) {
+          map.removeLayer('RouteString');
+        }
+        if (map.getSource('RouteString')) {
+          map.removeSource('RouteString');
+        }
+      }
     }, 350);
-    map?.removeLayer('RouteString');
-    map?.removeSource('RouteString');
   }
 
   return (

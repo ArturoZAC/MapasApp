@@ -115,7 +115,7 @@ export const MapProvider = ({children} : Props) => {
             kms /= 100;
 
         const minutes = Math.floor(duration / 60);
-        console.log({kms, minutes})
+        // console.log({kms, minutes})
 
         const bounds = new LngLatBounds(
             start,
