@@ -12,7 +12,6 @@ if(!navigator.geolocation){
   throw new Error('Tu navegador no tiene geolocation');
 }
 
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <MapsApp />
